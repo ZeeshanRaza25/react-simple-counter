@@ -15,7 +15,10 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-    
+
+      - name: Update caniuse-lite browserslist
+        run: npm update caniuse-lite browserslist
+
       - name: Build React App
         run: CI=false npm run build
     
